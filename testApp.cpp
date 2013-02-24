@@ -5,6 +5,7 @@ void testApp::setup(){
     w = 320;
     h = 240;
     vid.initGrabber(w, h);
+    ofBackground(30);
 }
 
 //--------------------------------------------------------------
@@ -16,6 +17,7 @@ void testApp::update(){
 void testApp::draw(){
     vid.draw(0,0);
     ws.draw(0, 0);
+    ofDrawBitmapString("capture image w/ spacebar \nmark areas with your mouse \npress 'w' to segment the image", 10, vid.getHeight() + 10);
 }
 
 //--------------------------------------------------------------
